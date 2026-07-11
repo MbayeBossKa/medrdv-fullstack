@@ -1,0 +1,23 @@
+body{
+    background:#f4f8fb;
+}
+
+.card{
+    border-radius:18px;
+}
+
+.navbar-brand img{
+    border-radius:12px;
+}
+
+.btn{
+    border-radius:10px;
+}
+
+.table{
+    vertical-align:middle;
+}
+
+h1{
+    font-weight:700;
+}

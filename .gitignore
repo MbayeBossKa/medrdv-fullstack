@@ -1,0 +1,19 @@
+# React
+medrdv-front/node_modules/
+medrdv-front/dist/
+medrdv-front/.env
+medrdv-front/.env.*
+
+# Laravel
+medrdv-api/vendor/
+medrdv-api/.env
+medrdv-api/storage/logs/*.log
+medrdv-api/bootstrap/cache/*.php
+
+# macOS
+.DS_Store
+
+# Éditeurs
+.vscode/
+.idea/
+*.zip
