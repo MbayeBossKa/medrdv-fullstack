@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : dim. 12 juil. 2026 à 01:15
+-- Généré le : dim. 12 juil. 2026 à 04:54
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -209,6 +209,13 @@ CREATE TABLE `personal_access_tokens` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Déchargement des données de la table `personal_access_tokens`
+--
+
+INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `expires_at`, `created_at`, `updated_at`) VALUES
+(7, 'App\\Models\\User', 1, 'medrdv-token', '0cc18c5e4af7ce0f3ebf1a1a59026d78f9fc4915eaea065a2f74ddded3c198a4', '[\"*\"]', '2026-07-12 02:47:41', NULL, '2026-07-12 02:47:20', '2026-07-12 02:47:41');
+
 -- --------------------------------------------------------
 
 --
@@ -297,6 +304,13 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Administrateur', 'admin@medrdv.com', NULL, '$2y$12$vWJ.hiadRg7y5eFuKiyMduu4ppi1yfFreVxQK2D7LjyqjbrXL9jze', NULL, '2026-07-12 01:22:30', '2026-07-12 01:22:30');
 
 --
 -- Index pour les tables déchargées
@@ -442,7 +456,7 @@ ALTER TABLE `patients`
 -- AUTO_INCREMENT pour la table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `rendez_vous`
@@ -460,7 +474,7 @@ ALTER TABLE `specialites`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Contraintes pour les tables déchargées
